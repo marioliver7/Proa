@@ -1,0 +1,122 @@
+body, html {
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(184, 21, 21);
+    padding: 0 50px;
+}
+
+nav h1 {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+    /* border: 1px solid red; */
+}
+
+.container h1 {
+    text-align: center;
+    color: rgb(184, 21, 21);
+}
+
+.container img {
+    width: 100%;
+    height: 21.875rem;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+} 
+
+.cards p i {
+    font-weight: 6     00;
+}
+
+.cards div p:first-child, .cards div p:last-child {
+    color: rgb(184, 21, 21);
+    font-size: 1.2rem;
+
+    font-weight: 600;
+}
+
+.cards div {
+    background-color: #f0f0f0;
+
+    height: 8.125rem;
+    width: 15rem;
+    text-align: center;
+}
+
+.ingredientes {
+    margin: 60px 0 45px 0;
+}
+
+.preparo {
+    margin-bottom: 45px;
+}
+
+.preparo ol li {
+    line-height: 3;
+}
+
+.ingredientes, .preparo {
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.ingredientes ul, .preparo ol {
+    line-height: 2.5;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: rgb(184, 21, 21);
+    border: 0;
+
+    height: 60px;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    text-align: center;
+    color: white;
+}

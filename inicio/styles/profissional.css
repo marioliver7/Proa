@@ -1,0 +1,11 @@
+.rightSide {
+    border-radius: 25px;
+    width: 100%;
+}
+
+img {
+    height: 500px;
+    width: 850px;
+
+    border-radius: 25px;
+}
