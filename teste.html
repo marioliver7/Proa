@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let media = 0;
+
+        for(i = 0; i < 4; i++) {
+            let num = Number(prompt('Digite o primeiro valor:'));
+
+            
+            if(num > 0 && num < 11) {
+                (media += num) / 2;
+            }
+
+        }
+        if(media < 6) {
+            console.log(media)
+           document.write('Você passou no teste <br>');
+        } else {
+            console.log(media)
+           document.write('Você não passou no teste <br>');
+        }
+    </script>
+    
+</body>
+</html>
