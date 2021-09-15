@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atm machine</title>
+</head>
+<body>
+    <Script>
+        let sal = 200;
+        
+        let nome = window.prompt("Qual é seu nome ?");
+        window.alert(`Olá, ` + nome + ` é um prazer ter você por aqui!`);
+		senha();
+        home();
+
+        function home(){
+        let choose = parseInt(prompt(`Olá ` + nome + ` O que deseja ?  1. Saldo  2. Extrato 3. Saque  4. Depósito  5. Transferência  6. Sair `));
+
+        if(choose === 1){
+            ver_sal();
+        } else if (choose === 2) {
+            extract();
+        } else if (choose === 3) {
+            do_saq();
+        } else if (choose === 4) {
+            do_depo();
+        } else if (choose === 5) {
+            do_transfer();
+        } else if (choose === 6) {
+            exit();
+        } else {
+            error404();
+        }
+    }
+
+        function ver_sal() {
+			senha();
+            alert(`Seu saldo é atualmente : R$ ${sal.toFixed(2)}`);
+        home();
+        }
+
+        function extract() { 
+            alert(`Aqui está seu extrato`);
+            alert(`últimas compras: `);
+            alert(`Ontem - Mercado Livre: R$29,88`);
+            alert(`Quinta Feira - Ebanx*Shopee: R$27,00`);
+        home();
+        }
+        
+        function do_saq() {
+			senha();
+            let saq = parseInt(prompt("Qual o valor para saque? "));
+            if (isNaN(saq) || saq === "" || saq <= 0) {
+                alert("Informe um número válido");
+                do_saq();
+            } else if (saq > sal) {
+                alert("Operação negada sem saldo suficiente");
+                alert(`Seu saldo é atualmente de R$ ${sal.toFixed(2)}`);
+                do_saq();
+            } else {
+                sal -= saq;
+                alert(`Seu saldo agora é: R$ ${sal.toFixed(2)}`);
+                home();
+            }
+        }
+
+        function do_depo() {
+            let depo = parseFloat(prompt("Qual valor deseja depositar? "));
+            if (isNaN(depo) || depo === "" || depo <= 0) {
+                alert("Informe um número válido");
+                do_depo();
+            } else {
+                sal += depo;
+                ver_sal();
+            }
+        }
+
+        function do_transfer() {
+			senha();
+            let conta = Number(prompt("Para qual conta deseja transferir ? "));
+            let transfer = parseInt(prompt("Quanto deseja transferir? "));
+            if (isNaN(transfer) || transfer === " ") {
+                alert("Informe um número válido");
+                do_transfer();
+            } else if(sal <= 0){
+                alert("Operação negada sem saldo suficiente");
+                alert(`Seu saldo é atualmente : R$ ${sal.toFixed(2)}`);
+                do_transfer();
+            } else{
+                sal >= transfer;
+                sal -= transfer;
+                alert(`Você tranferiu R$ ${transfer} para a conta ${conta}`);
+                alert(`Seu saldo agora é de R$ ${sal.toFixed(2)}`);
+                home();
+            }
+        }
+
+        function error404() {
+            alert(`Informe uma opção válida de 1 a 6`);
+            home();
+        }
+
+		function senha() {
+			let senhaUsuario = Number(prompt('Digite sua senha: '));
+
+			if(senhaUsuario === 3589) {
+				return;
+			} 
+
+			alert('Senha incorreta! Tente novamente!');
+			senha();
+		}
+
+        function exit() {
+    		let certeza = confirm ("Deseja realmente sair? ");
+            if (certeza) {
+                alert(`${nome} Foi um prazer ter você aqui! Volte Sempre!!`);
+                window.close();
+            } else {
+            home();
+            }
+        }
+
+       home()
+    </Script>
+</body>
+</html>
