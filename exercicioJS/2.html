@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Javascript!</title>
+
+    <script>
+        function mudar() {
+            // Identificar o pai de todos os elementos. 
+            var corpo = document.getElementsByTagName("body")[0];
+
+            //Encontre todos os elementos com a tag "<p>";
+            var arrayElementos = corpo.getElementsByTagName("p");
+            console.log(arrayElementos);
+
+            var lista1 = document.getElementsByTagName("ul");
+
+            //Encontre o primeiro elemento. 
+            var p1 = arrayElementos[0];
+            p1.style.background = "#336699";
+            p1.style.color = "#FFFFFF";
+
+            // Encontre um elemento específico
+            var p2 = arrayElementos[3];
+            p2.style.background = "rgb(255,255,0)";
+
+            [...[...document.getElementsByTagName('ul')][1].getElementsByTagName("li")][0].style.color = "red";
+            [...[...document.getElementsByTagName('ul')][2].getElementsByTagName("li")][1].style.color = "green";
+            [...[...document.getElementsByTagName('ul')][3].getElementsByTagName("li")][3].style.backgroundColor = "blue";
+            [...[...document.getElementsByTagName('ul')][2].getElementsByTagName("li")][1].style.border = "1px solid green";
+            [...[...document.getElementsByTagName('ul')][0].getElementsByTagName("li")][0].style.border = "1px solid blue";
+            [...[...document.getElementsByTagName('ul')][0].getElementsByTagName("li")][0].style.backgroundColor = "pink";
+            [...[...document.getElementsByTagName('ul')][4].getElementsByTagName("li")][1].style.border = "pink";
+            [...[...document.getElementsByTagName('ul')][4].getElementsByTagName("li")][1].style.backgroundColor = "blue";
+
+            
+            // A primeira linha da segunda lista deve ser da cor vermelha. 
+            // A segunda linha da terceira lista deve ser da cor verde.
+            // A quarta linha da quarta lista deve ter um background azul. 
+            // A segunda linha da terceira lista deve ter a borda verde
+            // A primeira linha da primeira lista deve um borda azul e o fundo rosa
+            // A segunda da linha da quinta lista deve ter uma borda rosa e o fundo azul
+
+            
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" id="botao " value="Clique aqui" onclick="mudar()">
+
+    <hr>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Aliquam consequat mi fermentum, sodales felis eget, iaculis sapien.</li>
+        <li>Vivamus a odio ut libero iaculis elementum.</li>
+    </ul>
+    <ul>
+        <li>Quisque vitae ex eu odio scelerisque hendrerit in at nibh.</li>
+        <li>Proin sit amet purus condimentum, semper diam sed, convallis nunc.</li>
+    </ul>
+    <ul>
+        <li>Aliquam a odio vitae ipsum feugiat varius et vel justo.</li>
+        <li>Nulla eu risus eget dui feugiat tincidunt vitae eget ipsum.</li>
+
+    </ul>
+    <ul>
+        <li>Suspendisse congue velit eget efficitur suscipit.</li>
+        <li>Nunc luctus dui eu augue ornare eleifend eu laoreet ante.</li>
+        <li>Quisque dignissim sem ut ipsum dignissim scelerisque.</li>
+        <li>Aenean a velit sit amet justo finibus suscipit.</li>
+    </ul>
+    <ul>
+        <li>Suspendisse eu ex id lectus porttitor sollicitudin ac in sapien.</li>
+        <li>Mauris congue tortor nec libero aliquet, non dignissim libero fringilla.</li>
+        <li>Curabitur at neque et nunc fermentum consequat in dignissim mauris.</li>
+    </ul>
+</body>
+
+</html>
