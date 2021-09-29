@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn input {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form">
+        <label>
+            Digite um número: 
+            <input type="number" class="num1">
+        </label>
+    
+        <label>
+            Digite outro número: 
+            <input type="number" class="num2">
+        </label>
+
+        <div class="btn">
+            <input type="button" value="+" class="soma">
+            <input type="button" value="-" class="subtracao">
+            <input type="button" value="/" class="divisao">
+            <input type="button" value="*" class="multiplicacao">
+        </div>
+    </div>
+
+    <h1></h1>
+
+    <script>
+        let num1 = document.querySelector('.num1');
+        let num2 = document.querySelector('.num2');
+        let h1 = document.querySelector('h1');
+
+        let soma = document.querySelector('.soma').addEventListener('click', () => {
+            h1.innerHTML = Number(num1.value) + Number(num2.value);
+        });
+
+        let subtracao = document.querySelector('.subtracao').addEventListener('click', () => {
+            h1.innerHTML = Number(num1.value) - Number(num2.value);
+        });
+
+        let divisao = document.querySelector('.divisao').addEventListener('click', () => {
+            h1.innerHTML = Number(num1.value) / Number(num2.value);
+        });
+
+        let multiplicacao = document.querySelector('.multiplicacao').addEventListener('click', () => {
+            h1.innerHTML = Number(num1.value) * Number(num2.value);
+        });
+
+    </script>
+</body>
+</html>
