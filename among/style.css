@@ -13,8 +13,17 @@
     box-sizing: border-box;
 }
 
+body, html {
+    background: black;
+    background-image: url('assets/fundoPreto.png');
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+.parallax {
+    background-attachment: fixed;
 }
 
 nav {
@@ -22,8 +31,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    border: 1px solid black;
-    background-color: var(--light-purple);
+    background-color: black;
     padding: 1rem 11rem;
 }
 
@@ -47,7 +55,7 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
-    color: #8a898d;
+    color: rgb(177, 44, 44);
     text-decoration: none;
     transition: 1s all;
 }
@@ -57,7 +65,9 @@ nav ul li a:hover {
 }
 
 section {
-    background-color: var(--section);
+    /* background-color: var(--section); */
+    background: url('assets/fundo4.jpg') no-repeat;
+    background-size: cover;
     height: 100vh;
     display: flex;
 }
@@ -67,6 +77,11 @@ section {
     align-items: center;
     justify-content: space-around;
     padding: 0 8rem;
+}
+
+span {
+    color: rgba(255, 0, 0, 0.432);
+    font-weight: bold;
 }
 
 .description p {
@@ -101,9 +116,10 @@ section {
 }
 
 article {
-    background-color: var(--light-purple);
     min-height: 100vh;
     width: 100%;
+
+    /* background: black; */
 
     display: flex;
     justify-content: center;
@@ -124,30 +140,19 @@ article h2 {
 
 article p {
     width: 40rem;
-    color: #787683;
+    color: #b4b4b4;
     font-size: 1.4rem;
 }
 
-.article2 {
-    background-color: var(--section);
-}
+.fundo {
+    background-color: black;
+    width: 100vw;
+    height: 300px;
 
-.ace {
-    width: 28rem;
-    height: 20rem;
-}
-
-.usabilidade {
-    width: 20rem;
-    height: 21rem;
-}
-
-.back {
-    width: 13rem;
-    height: 15rem;
+    z-index: 3;
 }
 
 footer {
-    background-color: var(--light-purple);
     padding: 1.5rem 5rem;
+    background-color: transparent;
 }
