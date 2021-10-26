@@ -13,13 +13,9 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 html, body {
     background: url('assets/fundoPreto.png');
-    /* background-color: black; */
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -137,30 +133,6 @@ span {
     margin-right: 5px
 }
 
-/* #sobre {
-    box-shadow: 20px 20px 30px rgba(194, 19, 19, 0.212);
-    margin: 100px auto -5px;
-    width: 70%;
-}
-
-#plataformas {
-    box-shadow: -20px 20px 30px rgba(194, 19, 19, 0.212);
-    margin: 0 auto;
-    width: 70%;
-}
-
-#grafico {
-    box-shadow: 20px 20px 30px rgba(194, 19, 19, 0.212);
-    margin: 0 auto;
-    width: 70%;
-}
-
-#customizacao {
-    box-shadow: -20px 20px 30px rgba(194, 19, 19, 0.212);
-    margin: 0 auto;
-    width: 70%;
-} */
-
 .section {
     background-color: black;
     border: none;
@@ -169,10 +141,6 @@ span {
 #impostorTripulante {
     display: flex;
     flex-direction: column;
-
-    /* box-shadow: 20px 20px 30px rgba(194, 19, 19, 0.212);
-    margin: 0 auto;
-    width: 70%; */
 }
 
 #impostorTripulante p, h2 {

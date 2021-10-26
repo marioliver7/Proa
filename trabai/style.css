@@ -47,7 +47,7 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
-    color: #8a898d;
+    color: white;
     text-decoration: none;
     transition: 1s all;
 }
@@ -71,7 +71,7 @@ section {
 
 .description p {
     width: 40rem;
-    color: #787683;
+    color: white;
     font-size: 1.4rem;
 }
 
@@ -89,7 +89,7 @@ section {
 .members {
     display: flex;
     justify-content: center;
-    color: #787683;
+    color: white;
 }
 
 .members p {
@@ -124,7 +124,7 @@ article h2 {
 
 article p {
     width: 40rem;
-    color: #787683;
+    color: #a3a2ad;
     font-size: 1.4rem;
 }
 
