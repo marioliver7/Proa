@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+
+  <div id="exemplo"></div>
+  
+  
+  
+  <script type="text/javascript">
+
+    class Pensamento {
+        constructor(momento, emocao, logica, intencao) {
+            this.momento = momento;
+            this.emocao = emocao;
+            this.logica = logica; 
+            this.intencao = intencao;
+            this.duracao = duracao; // Se for paixão dura só 3 meses. 
+        }
+
+        muda () {
+            console.log('Esse pensamento mudou!');
+        }
+
+        crescer() {
+            console.log('Esse pensamento cresceu!');
+        }
+
+        acabar() {
+            console.log('Esse pensamento acabou!');
+        }
+    }
+
+    class Caixa {
+        constructor(quantidade) {
+            this.quantidade = quantidade;
+        }
+
+        tirar() {
+            this.quantidade = this.quantidade - 1;
+            console.log('A caixa possui ' + this.quantidade +' chocolates.');
+        }        
+
+        colocar() {
+            this.quantidade = this.quantidade + 1;
+            console.log('A caixa possui ' + this.quantidade +' chocolates.');
+        }
+    }
+    const nestle = new Caixa(500);
+
+    class Animal {
+        constructor(nome, tamanho, peso, longevidade, som, classe) {
+            this.nome = nome;
+            this.tamanho = tamanho;
+            this.peso = peso;
+            this.longevidade = longevidade;
+            this.som = som; 
+        }
+
+        falar() {
+            if (this.nome == 'Adalberto') {
+                console.log('Girafas não emitem sons');
+            } else {
+                console.log(this.nome +' emitiu um som.');
+            }
+        }
+
+        andar() {
+            console.log(this.nome +' andou.');
+        }
+    }
+
+    class Formiga extends Animal {
+        constructor(classe) {
+            this.classe = classe;
+        }
+    }
+
+    var formiga = new Animal("Ota", 'Pequeno', "", "50 anos", "");
+    var elefante = new Animal("Jotalhão", 'Grande', '2 toneladas', 'ele viveu 90 anos', 'ele cacareja');
+    var girafa = new Animal("Adalberto", 'Grande', '2 toneladas', 'ele viveu 90 anos', 'Mudo');
+
+    document.getElementById("exemplo").innerHTML = "O nome da minha formiga é " + formiga.nome + " e o tamanho dela é " + formiga.tamanho;
+    document.getElementById("exemplo").innerHTML += "<br> O nome da minha elefante é " + elefante.nome + " e o tamanho dela é " + elefante.tamanho;
+    document.getElementById("exemplo").innerHTML += "<br> O nome da minha girafa é " + girafa.nome + " e o som dela é " + girafa.som;
+
+    girafa.falar(); 
+    elefante.falar(); 
+    formiga.andar(); 
+
+  </script>
+
+</body>
+</html>
